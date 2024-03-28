@@ -13,3 +13,18 @@ class AlunoPlus(models.Model):
 
     def __str__(self):
         return self.nome
+
+
+
+
+class DocumentoTextoPlus(models.Model):
+
+    data_Plus = models.DateTimeField('Data de Plus', blank=True, null=True)
+    class Meta:
+        abstract=True
+
+    def novo_plus(self):
+        return "Novo plus"
+    
+    def get_pdf(self):
+        return "Alterar pelo plus"
